@@ -50,12 +50,7 @@ def readFastq(filename):
 
 
 def BaseContent(aBase,str):
-    counter=0
-    for base in range(len(str)):
-      if (str[base]==aBase):
-          counter+=1
-   
-    return counter
+    return str.count(aBase) 
    
 
 
