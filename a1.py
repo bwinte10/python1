@@ -50,7 +50,7 @@ def readFastq(filename):
 
 
 def BaseContent(aBase,str):
-    return str.count(aBase) 
+    return str.count(aBase)/len(str)
    
 
 
@@ -65,23 +65,23 @@ print(geno)
 seqLen=len(geno)
 print("Sequence is ",seqLen," long.");
 
-Acnt=0
-Tcnt=0
-Gcnt=0
-Ccnt=0
+Acnt=0.0
+Tcnt=0.0
+Gcnt=0.0
+Ccnt=0.0
 
 Acnt=BaseContent('A',geno)
-print("Check A content . . .",Acnt/seqLen)
+print("Check A content . . .",Acnt)
 
 
 Tcnt=BaseContent('T',geno)
-print("Check T content . . .",Tcnt/seqLen)
+print("Check T content . . .",Tcnt)
 
 Gcnt=BaseContent('G',geno)
-print("Check G content . . . ",Gcnt/seqLen)
+print("Check G content . . . ",Gcnt)
 
 Ccnt=BaseContent('C',geno)
-print("Check C content . . .",Ccnt/seqLen)
+print("Check C content . . .",Ccnt)
 
 print("To check for percent ", Acnt+Tcnt+Gcnt+Ccnt) 
 
